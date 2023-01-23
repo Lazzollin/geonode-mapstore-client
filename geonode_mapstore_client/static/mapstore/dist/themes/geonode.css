@@ -33639,7 +33639,7 @@
     overflow-y: auto
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:975px) {
     .msgapi .gn-search-bar {
         min-width: 300
     }
