@@ -33016,7 +33016,7 @@
 
 .msgapi .gn-menu {
     display: flex;
-    min-height: 3rem;
+    min-height: 5rem;
     padding: .5rem 0;
     position: relative;
     width: 100%
@@ -33092,7 +33092,7 @@
 }
 
 .msgapi .gn-menu .gn-menu-list img {
-    height: 2.5rem;
+    height: 5rem;
     width: auto
 }
 
@@ -33641,7 +33641,12 @@
 
 @media screen and (min-width:768px) {
     .msgapi .gn-search-bar {
-        min-width: 500px
+        min-width: 300
+    }
+}
+@media screen and (min-width:976px) {
+    .msgapi .gn-search-bar {
+        min-width: 500
     }
 }
 
