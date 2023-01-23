@@ -33644,6 +33644,7 @@
         min-width: 300
     }
 }
+
 @media screen and (min-width:976px) {
     .msgapi .gn-search-bar {
         min-width: 500
