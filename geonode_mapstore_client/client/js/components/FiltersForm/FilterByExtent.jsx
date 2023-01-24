@@ -105,9 +105,9 @@ function FilterByExtent({
                                 style: vectorLayerStyle
                                     ? { ...vectorLayerStyle,  weight: 0.001 }
                                     : {
-                                        color: '#397AAB',
+                                        color: '#00a653',
                                         opacity: 0.8,
-                                        fillColor: '#397AAB',
+                                        fillColor: '#00a653',
                                         fillOpacity: 0.4,
                                         weight: 0.001
                                     }

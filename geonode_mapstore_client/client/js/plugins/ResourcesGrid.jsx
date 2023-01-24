@@ -233,9 +233,9 @@ function ResourcesGrid({
             }
         ],
         style: {
-            color: '#397AAB',
+            color: '#00a653',
             opacity: 0.8,
-            fillColor: '#397AAB',
+            fillColor: '#00a653',
             fillOpacity: 0.4,
             weight: 4
         }

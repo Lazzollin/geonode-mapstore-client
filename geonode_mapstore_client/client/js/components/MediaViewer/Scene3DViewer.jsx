@@ -53,7 +53,7 @@ function PCDModel({ src, onChange }) {
     if (pcd) {
         pcd.geometry.computeBoundingSphere();
         if (pcd.material) {
-            pcd.material.color = new THREE.Color(0x397AAB);
+            pcd.material.color = new THREE.Color(0x00a653);
         }
     }
     const { radius, center } = pcd?.geometry?.boundingSphere || {};
