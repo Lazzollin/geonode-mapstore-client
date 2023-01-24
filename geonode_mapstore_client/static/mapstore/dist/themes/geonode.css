@@ -32675,7 +32675,7 @@
 }
 
 .msgapi .gn-hero .jumbotron .gn-hero-description h1 {
-    font-size: 5.25rem;
+    font-size: 2.25rem;
     font-weight: lighter
 }
 
@@ -32701,7 +32701,7 @@
 
 .msgapi .gn-hero .jumbotron .gn-hero-description h6,
 .msgapi .gn-hero .jumbotron .gn-hero-description p:not(.gn-hero-tools) {
-    font-size: 1.3125rem;
+    font-size: 1rem;
     font-weight: lighter
 }
 
@@ -32729,7 +32729,7 @@
     }
 
     .msgapi .gn-hero .jumbotron .gn-hero-description h1 {
-        font-size: 3.0625rem
+        font-size: 2rem
     }
 
     .msgapi .gn-hero .jumbotron .gn-hero-description h2 {
@@ -36235,8 +36235,8 @@
 
 .msgapi .page-maps .ms-home-description,
 .msgapi .page-maps .ms-home-description .container {
-    background-color: #0c3756;
-    background-color: var(--gn-jumbotron-bg, #0c3756)
+    background-color: #014a25;
+    background-color: var(--gn-jumbotron-bg, #014a25)
 }
 
 .msgapi .page-maps .navbar-home {
@@ -39564,8 +39564,8 @@
 }
 
 .msgapi .gn-hero {
-    background-color: #0c3756;
-    background-color: var(--gn-jumbotron-bg, #0c3756);
+    background-color: #014a25;
+    background-color: var(--gn-jumbotron-bg, #014a25);
     color: #fff;
     color: var(--gn-jumbotron-color, #fff)
 }
