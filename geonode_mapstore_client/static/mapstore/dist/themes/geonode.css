@@ -34710,8 +34710,8 @@
 .msgapi .btn-primary:hover {
     background-color: #026b37;
     background-color: var(--gn-button-primary-hover-bg, #026b37);
-    border-color: #2a597d;
-    border-color: var(--gn-button-primary-hover-border-color, #2a597d);
+    border-color: #05c766;
+    border-color: var(--gn-button-primary-hover-border-color, #05c766);
     color: #fff;
     color: var(--gn-button-primary-hover-color, #fff)
 }
@@ -34721,8 +34721,8 @@
 .msgapi .open>.dropdown-toggle.btn-primary {
     background-color: #026b37;
     background-color: var(--gn-button-primary-active-bg, #026b37);
-    border-color: #2a597d;
-    border-color: var(--gn-button-primary-active-border-color, #2a597d);
+    border-color: #05c766;
+    border-color: var(--gn-button-primary-active-border-color, #05c766);
     color: #fff;
     color: var(--gn-button-primary-active-color, #fff)
 }
@@ -34790,10 +34790,10 @@
 }
 
 .msgapi .btn-info {
-    background-color: #275a7f;
-    background-color: var(--gn-button-info-bg, #275a7f);
-    border-color: #275a7f;
-    border-color: var(--gn-button-info-border-color, #275a7f);
+    background-color: #026b37;
+    background-color: var(--gn-button-info-bg, #026b37);
+    border-color: #026b37;
+    border-color: var(--gn-button-info-border-color, #026b37);
     color: #fff;
     color: var(--gn-button-info-color, #fff)
 }
@@ -34886,8 +34886,8 @@
 .msgapi .btn-info .badge {
     background-color: #fff;
     background-color: var(--gn-button-info-badge-bg, #fff);
-    color: #275a7f;
-    color: var(--gn-button-info-badge-color, #275a7f)
+    color: #026b37;
+    color: var(--gn-button-info-badge-color, #026b37)
 }
 
 .msgapi .btn-success {
@@ -39607,8 +39607,8 @@
 }
 
 .msgapi .gn-action-navbar-title {
-    background-color: #275a7f;
-    background-color: var(--gn-info, #275a7f);
+    background-color: #026b37;
+    background-color: var(--gn-info, #026b37);
     color: #fff;
     color: var(--gn-info-contrast, #fff)
 }
