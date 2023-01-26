@@ -31,7 +31,7 @@
                         {% trans menu_item.label %}
                     {% endif %}
                     {% if menu_item.image %}
-                        <img src="{{ menu_item.image }}">
+                        <img style="height: 3rem;" src="{{ menu_item.image }}">
                     {% endif %}
                 </button>
                 <ul class="dropdown-menu{% if align_right %} dropdown-menu-right{% endif %}" aria-labelledby="{{menu_item.id}}">
