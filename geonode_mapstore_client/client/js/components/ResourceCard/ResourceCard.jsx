@@ -154,7 +154,7 @@ const ResourceCard = forwardRef(({
                                         ? '0 0.25rem 0 0.5rem'
                                         : '0 0.5rem'
                             }}
-                        >
+                        >xdxdxd
                             <AuthorInfo
                                 resource={res}
                                 readOnly={readOnly}
