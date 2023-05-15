@@ -113,6 +113,12 @@
             "templateError": "There was an error applying the template to the information returned by the server, please check the template",
             "templatePreview": "Template preview",
             "heightOffset": "Height offset (m)",
+            "wmsLayerTileSize": "Tile size (WMS)",
+            "serverType": "Server Type",
+            "serverTypeOption": {
+                "noVendor": "No Vendor",
+                "geoserver": "GeoServer"
+            },
             "visibilityLimits": {
                 "title": "Visibility limits",
                 "serverValuesUpdateUndefined": "The server did not provided scale visibility limits for this layer",
@@ -158,7 +164,7 @@
             },
             "format": {
                 "title": "Format",
-                "refresh": "Fetch supported format",
+                "refresh": "Fetch supported formats",
                 "loading": "Loading...",
                 "noOption": "No option",
                 "error": {
@@ -741,7 +747,25 @@
             "selectTool": "Select a measurement tool",
             "exportToGeoJSON": "Export to GeoJSON",
             "resetTooltip": "Clear measures",
-            "addAsLayer": "Add as layer"
+            "addAsLayer": "Add as layer",
+            "polylineDistance3DMeasure": "Measure distance in 3D space",
+            "area3DMeasure": "Measure area in 3D space",
+            "pointCoordinatesMeasure": "Measure point coordinates",
+            "heightFromTerrainMeasure": "Measure height from terrain",
+            "angle3DMeasure": "Measure angle in 3D space",
+            "slopeMeasure": "Measure slope",
+            "tooltipPolylineDistance3DStart": "Click to start measurement",
+            "tooltipPolylineDistance3DEnd": "Single click to add a segment\nor double click to end",
+            "tooltipArea3DStart": "Click to start measurement",
+            "tooltipArea3DMissingVertex": "Area needs at least 3 vertices, \nsingle click to add a vertex",
+            "tooltipArea3DEnd": "Single click to add a vertex\nor double click to end",
+            "tooltipPointCoordinatesStart": "Click to add an altitude point measurement",
+            "tooltipHeightFromTerrainStart": "Click to add the distance value from terrain surface",
+            "tooltipAngle3DStart": "Single click to draw 3 points that represent the angle vertices",
+            "tooltipSlopeStart": "Single click to draw 3 points that represent a triangle surface.\nThe slope value is computed based on the drawn triangle surface",
+            "altitude": "Altitude",
+            "latitude": "Latitude",
+            "longitude": "Longitude"
         },
         "search":{
             "layerMustBeVisible": "The target layer is inactive",
@@ -1465,7 +1489,8 @@
             },
             "format": {
                 "noOption": "No option",
-                "loading": "Loading..."
+                "loading": "Loading...",
+                "refresh": "Fetch supported formats"
             },
             "filter": {
                 "static": {
@@ -1475,7 +1500,7 @@
                 "dynamic": {
                     "label": "Dynamic Filter",
                     "info": "Filter is used when search text is present and is applied in 'AND' with static filter",
-                    "helpText": "Use template with ${searchText} placeholder to capture search string"
+                    "helpText": "Use template with $\\{searchText\\} placeholder to capture search string"
                 },
                 "error": "Invalid xml syntax"
             },
@@ -1483,6 +1508,9 @@
                 "label": "Set Visibility Limit",
                 "tooltip": "Automatically applies the visibility limits suggested by the server"
            },
+           "singleTile": {
+                "tooltip": "The layer is rendered as a single tile image when added to the map with this option enabled"
+            },
            "allowUnsecureLayers": {
                 "label": "Allow not secure layers",
                 "tooltip": "Adding layer to map with this option enabled, forces the application to apply proxy"
@@ -1709,7 +1737,9 @@
                   "edge": "Edge",
                   "pixelTolerance": "Tolerance (pixel)",
                   "loadingStrategy": "Loading strategy"
-                }
+                },
+                "disableViewportFilter": "Do not filter data by the current viewport",
+                "enableViewportFilter": "Filter data by the current viewport"
             }
         },
         "layerdownload": {
@@ -1780,7 +1810,8 @@
             },
             "selectWidgetType": "Select the widget type",
             "selectChartType": {
-                "title": "Select the Chart type"
+                "title": "Chart type",
+                "noResults": "No chart found"
             },
             "selectMap": {
                 "TOC": {
@@ -1814,15 +1845,18 @@
                 "wizard": {
                     "backToTypeSelection": "Back to chart type selection",
                     "backToWidgetTypeSelection": "Back to widget type selection",
+                    "backToChartOptionConfiguration": "Back to chart option configuration",
                     "backToFeatureGrid": "Back to the feature grid",
                     "backToLayerSelection": "Back to layer selection",
                     "backToMapSelection": "Back to map selection",
                     "backToPreview": "Back to Preview",
                     "backToChartOptions": "Back to chart options",
                     "selectALayer": "Select a layer",
+                    "selectLayers": "Select one or more layers",
                     "selectAMap": "Select one or more maps",
                     "configureChartOptions": "Configure chart options",
                     "configureWidgetOptions": "Configure widget options",
+                    "errorChart": "One or more chart(s) is invalid",
                     "backToTableOptions": "Back to table options",
                     "configureTableOptions": "Configure table options",
                     "resetColumnsSizes": "Reset all changes to the column sizes",
@@ -1842,6 +1876,7 @@
                     "connectToTheMap": "Connect to the map",
                     "selectMapToConnect": "Select the widget to connect",
                     "clearConnection": "Clear connection",
+                    "disableConnectToMap": "Operation unavailable",
                     "classAttributes": {
                         "classColor": "Class Color",
                         "classLabel": "Class Label",
@@ -1871,11 +1906,14 @@
                     "noAttributesDescription": "The selected layer has no attributes to show. Please select another widget type or layer",
                     "noWidgetsAvailableTitle": "Can not create the widget for the selected layer",
                     "noWidgetsAvailableDescription": "<p><strong>Please try to select another layer or widget type</strong></p><p>The server doesn't provide the needed services for the layer and the widget type selected</p><p>Possible causes are: <ul><li>The selected layer is a raster layer</li><li>WFS service is not available</li><li>The WPS process <code>gs:aggregate</code> is not available</li></ul></p>",
+                    "attributesNotMatchingDescription": "<p><strong>Please try to select another layer</strong></p><p>The attributes of the selected layer(s) doesn't match the parent dependant widget</p>",
                     "checkAtLeastOneAttribute": "You must select at least one column",
                     "noMapAvailableForLegend": "No map available",
                     "noMapAvailableForLegendDescription": "You need at least one map widget to create the legend"
                 },
-                "setupFilter": "Configure a filter for the widget data"
+                "setupFilter": "Configure a filter for the widget data",
+                "addNewLayers": "Add new layer(s)",
+                "deleteChart": "Delete current chart"
             },
             "widget": {
                 "menu": {
@@ -1901,6 +1939,13 @@
                 "placeholder": "Enter map name",
                 "selectLabel": "Select a map",
                 "infoOnHide": "Expand widget to see map switcher",
+                "subTitle": "<p>For multi-selection,<br>on windows use CTRL + click <br> and on Mac use control + click</p>"
+            },
+            "chartSwitcher": {
+                "noResults": "No layer found",
+                "placeholder": "Enter chart name",
+                "selectLabel": "Chart",
+                "infoOnHide": "Expand widget to see chart switcher",
                 "subTitle": "<p>For multi-selection,<br>on windows use CTRL + click <br> and on Mac use control + click</p>"
             },
             "chartType": {
@@ -2212,7 +2257,7 @@
             "shape": "Shape",
             "fill": "Fill color",
             "clampToGround": "Clamp to ground",
-            "clampOutlineToGround": "Clamp outline to ground",
+            "clampOutlineToGround": "Clamp to ground",
             "msBringToFront": "Bring to front",
             "heightReferenceFromGround": "Height reference from ground",
             "height": "Height",
@@ -2222,8 +2267,8 @@
             "strokeWidth": "Stroke width",
             "radius": "Radius",
             "rotation": "Rotation",
-            "classificationtype": "Polygon type",
-            "3dTile": "3D",
+            "classificationtype": "Clamp to ground reference",
+            "3dTile": "3D Tiles",
             "terrain": "Terrain",
             "both": "Both",
             "relative": "Relative",
@@ -2370,12 +2415,31 @@
             "warningTextOrderTitle": "Warning",
             "warningTextOrder": "The order of rule containing text style could not match the rendering order on map. This behaviour is related to some rendering engine that draw label on top of other rules",
             "invalidProperty": "The { key } property type is invalid",
-            "notSupportedVariable": "The variable { key } is not supported by the tileset"
+            "notSupportedVariable": "The variable { key } is not supported by the tileset",
+            "addModelRule": "Add 3D model rule",
+            "model": "3D Model",
+            "placeholderEnterModelUrl": "Enter a .glb file url",
+            "invalidModelUrl": "The provided url is invalid",
+            "scale": "Scale",
+            "heading": "Z axis rotation",
+            "pitch": "X axis rotation",
+            "roll": "Y axis rotation",
+            "color": "Color",
+            "pointHeight": "Point height",
+            "leaderLineColor": "Leader line color",
+            "leaderLineWidth": "Leader line width"
         },
         "playback": {
             "settings": {
                 "tooltip": "Settings",
-                "title": "Playback Settings",
+                "tab": {
+                  "playback": "Playback",
+                  "layers": "Layers"
+                },
+                "layer": {
+                  "enabled": "Display or hide layer from the timeline",
+                  "disabled": "Guide layer cannot be hidden"
+                },
                 "frameDuration": "Frame Duration",
                 "range": {
                     "title": "Animation Range",
@@ -2434,6 +2498,11 @@
             "disablePlayBack": "Disable playback controls",
             "expand" : "Expand time slider",
             "collapse" : "Collapse time slider",
+            "reset" : {
+              "range": "Set range to include all data",
+              "singleNow": "Set time to now",
+              "singleNearest": "Set time to nearest value to now"
+            },
             "collapsed": {
                 "title": "Timeline has been collapsed",
                 "tooltip": "Click here to expand it again"
@@ -3034,6 +3103,10 @@
           "ZoomOut": {
             "description": "Button that decrease zoom level of the map",
             "title": "Zoom Out"
+          },
+          "MapViews": {
+            "description": "This plugin allows to add a sequence of different views inside a map",
+            "title": "MapViews"
           }
         },
         "contextCreator": {
@@ -3241,6 +3314,68 @@
                 "message": "An unexpected error occurred during layers syncing. There is probably a bug in MapStore"
             },
             "layerType": "type: {type}"
+        },
+        "mapViews": {
+            "description": "Description",
+            "position": "Position",
+            "animation": "Animation",
+            "mask": "Mask",
+            "globeTranslucency": "Globe Transluncency",
+            "layersOptions": "Layers Options",
+            "cameraPosition": "Camera position",
+            "longitude": "Longitude",
+            "latitude": "Latitude",
+            "height": "Height (m)",
+            "centerPosition": "Center position",
+            "captureThisViewPositions": "Capture this view positions",
+            "durationLabel": "Duration (s)",
+            "flyToLabel": "Animation transition during navigation",
+            "maskEnable": "Enable mask",
+            "maskLayer": "Layer",
+            "maskInverse": "Inverse",
+            "maskInverseOffset": "Inverse offset (m)",
+            "globeTranslucencyEnable": "Enable translucency",
+            "globeTranslucencyOpacity": "Opacity",
+            "globeTranslucencyFadeByDistance": "Fade translucency by distance",
+            "globeTranslucencyNearDistance": "Minimum distance (m)",
+            "globeTranslucencyFarDistance": "Maximum distance (m)",
+            "showClippingLayersGeometries": "Show clipping layers geometries",
+            "terrain": "Terrain",
+            "clippingSourceLayer": "Clipping layer source",
+            "clippingFeature": "Clipping feature",
+            "clippingInverse": "Inverse clipping",
+            "layerOpacity": "Opacity",
+            "showViewsGeometries": "Show views positions",
+            "addInitialView": "Click on the plus button to add a new view",
+            "removeView": "Remove view",
+            "resetLayerOverrides": "Reset changes to align layer to default value",
+            "hideLayer": "Hide layer",
+            "showLayer": "Show layer",
+            "undoChanges": "Undo changes",
+            "redoChanges": "Redo changes",
+            "addNewView": "Add new view",
+            "addNewViewBelowSelected": "Add a new view below the selected one",
+            "hideDescription": "Hide description",
+            "showDescription": "Show description",
+            "copyCurrentView": "Copy current view",
+            "edit": "Edit",
+            "stopEdit": "Stop editing",
+            "showViewsList": "Show views list",
+            "hideViewsList": "Hide views list",
+            "gotToFirstView": "Go to first view",
+            "gotToPreviousView": "Go to previous view",
+            "play": "Start navigation",
+            "pause": "Pause navigation",
+            "gotToNextView": "Go to next view",
+            "gotToLastView": "Go to last view",
+            "maskWithGlobeTranslucencyWarning": "Enabling mask and globe translucency at the same time could cause artifact in the visualization. Please use one only of these two options per view",
+            "deactivateMapViews": "Disable map views",
+            "activateMapViews": "Activate map views",
+            "maskOtherVisibleLayerWarning": "There are other vector layers visible, all polygonal features visible in map will be applied to all the visible 3D tiles",
+            "resourceLayerRequestError": "It was not possible to complete the request to the selected layer. Please verify if the layer is still available",
+            "maskLayerPolygonError": "The layer selected does not contain polygonal features so the mask could not have effect",
+            "clipPolygonFeaturesNotAvailable": "The selected layer does not contain polygonal features, please select another layer",
+            "addNewLayerToTheMap": "The map is empty. Please add new layers inside the map to make them available in the view list"
         },
         "tutorial": {
             "title": "Tutorial",
