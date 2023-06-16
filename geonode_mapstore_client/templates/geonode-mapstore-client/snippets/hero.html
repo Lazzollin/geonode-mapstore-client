@@ -22,7 +22,6 @@
         <div class="gn-hero-description">
             {% if not custom_theme.jumbotron_welcome_hide %}
                 {% with jumbotron_welcome_title=custom_theme.jumbotron_welcome_title|default:"GeoNode"|template_trans %}
-                <h1>{% trans jumbotron_welcome_title %}</h1>
                 {% endwith %}
                 {% with jumbotron_welcome_content=custom_theme.jumbotron_welcome_content|default:"sharing geospatial data and maps."|template_trans %}
                 <p>{% trans jumbotron_welcome_content %}</p>
@@ -36,7 +35,7 @@
 {% else %}
 <div class="gn-hero">
     <div class="jumbotron gn-carousel">
-        <div id="gn-hero-carousel" class="carousel slide" data-ride="carousel">
+        <div id="gn-hero-carousel" style="position: relative" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             {% if slides.count > 1%}
             <ol class="carousel-indicators">
@@ -80,6 +79,24 @@
                 <span class="sr-only">Next</span>
             </a>
             {% endif %}
+        </div>
+        <div style="    position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 20%">
+            <h1 class="carousel-header" style="text-shadow: 1px 1px 0px black;">GeoSATA</h1>
+            <p style="    font-size: medium;
+            text-wrap: balance;
+            text-shadow: 1px 1px 0px black;">Bienvenidxs al portal de información ambiental territorial GEOSATA del  Ministerio de Ambiente de la Provincia de Buenos Aires.
+                Aquí podrás encontrar información de base cartográfica con su legislación y fuentes bibliográficas correspondientes. Desde el programa SATA  (res. 88/2015) trabajamos en coordinación con las dependencias del MAPBA, y con otros organismos del Estado, para brindar un mayor acceso a la información pública ambiental, aportando a fortalecer las capacidades de la Provincia en el análisis, la prevención y la mitigación de conflictos ambientales. 
+                Servicios de Visualización: https://sata.ambiente.gba.gob.ar/geoserver/wms. 
+                Servicios de Descarga: https://sata.ambiente.gba.gob.ar/geoserver/wfs
+                </p>
         </div>
     </div>
 </div>
