@@ -42,6 +42,9 @@
                     <div class="gn-container">
                         <div id="gn-home-featured-resources-grid"></div>
                         <div id="gn-home-resources-grid"></div>
+                        <div id="gn-si">
+                            <h1>HOLA QUE TAL</h1>
+                        </div>
                     </div>
                 {% endblock %}
     
@@ -74,6 +77,18 @@
                                     containerSelector: '#gn-home-resources-grid',
                                     pagination: false,
                                     pagePath: '/catalogue/',
+                                    disableFilters: true,
+                                    disableDetailPanel: true,
+                                    enableGeoNodeCardsMenuItems: true
+                                }
+                            },
+                            {
+                                name: 'Si',
+                                cfg: {
+                                    targetSelector: '#gn-si',
+                                    containerSelector: '#gn-si',
+                                    pagination: false,
+                                    pagePath: '/si',
                                     disableFilters: true,
                                     disableDetailPanel: true,
                                     enableGeoNodeCardsMenuItems: true
