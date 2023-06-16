@@ -41,9 +41,9 @@
                     {% endcomment %}
                     <div class="gn-container">
                         <div id="gn-home-featured-resources-grid"></div>
-                        <div id="gn-home-resources-grid"></div>
-                        <div id="gn-si">
-                            <h1>HOLA QUE TAL</h1>
+                        <div id="gn-home-resources-grid" style="display: none;"></div>
+                        <div id="gn-home-welcome" style="display: none;">
+                            Hola que tal, esto es geosata y esta re piola
                         </div>
                     </div>
                 {% endblock %}
@@ -58,7 +58,20 @@
                         </div>
                     </div>
                 {% endblock %}
-
+                <script>
+                    console.log("{% block logo_href %}{% catalogue_home %}{% endblock %}")
+                    const content = document.getElementById("gn-home-resources-grid");
+                    const welcome = document.getElementById("gn-home-welcome");
+                    if (window.location.href === "https://geosata.ambiente.gba.gob.ar/#/") {
+                        console.log("a");
+                        content.style.display = "none";
+                        welcome.style.display = "block";
+                    } else {
+                        console.log("b");
+                        content.style.display = "block";
+                        welcome.style.display = "none";
+                    }
+                </script>
                 <script>
                     window.addEventListener('mapstore:ready', function(event) {
                         const msAPI = event.detail;
