@@ -56,6 +56,7 @@ function CatalogueRoute({
     plugins
 }) {
 
+    console.log("Hola que tal");
     const pluginsConfig = getPluginsConfiguration(name, propPluginsConfig);
 
     const { plugins: loadedPlugins, pending } = useModulePlugins({

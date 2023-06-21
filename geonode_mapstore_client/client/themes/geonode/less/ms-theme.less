@@ -195,6 +195,29 @@ div#mapstore-globalspinner {
 // review drawer menu and toc style
 
 #mapstore-drawermenu {
+    div {
+        position: absolute;
+        inset: 0px;
+        overflow: visible;
+        width: 350px;
+    }
+    .nav-menu {
+        z-index: 1022;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        transition: -webkit-transform 0.3s ease-out 0s;
+        will-change: transform;
+        overflow-y: auto;
+        height: calc(100% - 30px);
+        width: 350px;
+        left: 0px;
+        box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 4px;
+        transform: translateX(0%);
+    }
+    .navButtons {
+        display: none !important;
+    }
     .nav-content {
         display: flex;
         flex-direction: column;
