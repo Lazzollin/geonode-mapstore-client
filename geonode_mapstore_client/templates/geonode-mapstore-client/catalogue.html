@@ -36,8 +36,6 @@
                     {% include './snippets/header.html' %}
                 {% endblock %}
 
-                {% include './snippets/hero.html' %}
-
                 {% block container %}
                     <div id="ms-container">
                         <div class="gn-main-event-container">
@@ -47,6 +45,12 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                        const container = document.getElementById("ms-container");
+                        if (window.location.search === "?f=map") {
+                            container.insertAdjacentHTML('beforeend', "{% include './hero.html' %}")
+                        }
+                    </script>
                 {% endblock %}
 
                 {% block ms_scripts %}
