@@ -46,7 +46,7 @@
             </ol>
             {% endif %}
             <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner" role="listbox" style="filter: brightness(0.8);">
                 {% for slide in slides %}
                 <div class="item {% if forloop.counter == 1 %}active{%endif%}">
                     {% if slide.jumbotron_slide_image %}
