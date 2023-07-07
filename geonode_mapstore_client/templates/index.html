@@ -30,35 +30,35 @@
                     {% include './geonode-mapstore-client/snippets/header.html' with show_hero=True %}
                 {% endblock %}
     
-                {% block content %}
-                    {% comment %}
-                    <!-- example of content extension -->
-                    <div class="gn-container">
-                        <div class="gn-content">
-                            <!-- My custom content -->
-                        </div>
-                    </div>
-                    {% endcomment %}
-                    <div class="gn-container">
-                        {% if request.path == '/' %}
+                {% if request.path == '/' %}
                             <h1>AaaA</h1>
-                        {% else %}
-                            <div id="gn-home-featured-resources-grid"></div>
-                            <div id="gn-home-resources-grid"></div>
-                        {% endif %}
-                    </div>
-                {% endblock %}
-    
-                {% block container %}
-                    <div id="ms-container">
-                        <div class="gn-main-event-container">
-                            <div class="gn-main-event-content">
-                                <div class="gn-main-loader"></div>
-                                <div class="gn-main-event-text"></div>
+                {% else %}
+                    {% block content %}
+                        {% comment %}
+                        <!-- example of content extension -->
+                        <div class="gn-container">
+                            <div class="gn-content">
+                                <!-- My custom content -->
                             </div>
                         </div>
-                    </div>
-                {% endblock %}
+                        {% endcomment %}
+                        <div class="gn-container">
+                                <div id="gn-home-featured-resources-grid"></div>
+                                <div id="gn-home-resources-grid"></div>
+                        </div>
+                    {% endblock %}
+        
+                    {% block container %}
+                        <div id="ms-container">
+                            <div class="gn-main-event-container">
+                                <div class="gn-main-event-content">
+                                    <div class="gn-main-loader"></div>
+                                    <div class="gn-main-event-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endblock %}
+                {% endif %}
 
                 <script>
                     window.addEventListener('mapstore:ready', function(event) {
