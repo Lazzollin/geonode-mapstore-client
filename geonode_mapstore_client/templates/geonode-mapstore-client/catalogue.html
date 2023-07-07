@@ -47,10 +47,10 @@
                     </div>
                     <script>
                         const container = document.getElementById("ms-container");
-                        // if (window.location.search === "?f=map") {
-                        //     container.insertAdjacentHTML('beforeend', "holis")
-                        // }
-                        console.log(window.location.search)
+                        if (window.location.href === 'https://geosata.ambiente.gba.gob.ar/catalogue/#/?f=map') {
+                            container.insertAdjacentHTML('afterbegin', "{% include './hero.html' %}")
+                            console.log("AAA")
+                        }
                     </script>
                 {% endblock %}
 
