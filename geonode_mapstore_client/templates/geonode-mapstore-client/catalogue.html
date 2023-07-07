@@ -38,9 +38,10 @@
 
                 {% block container %}
                     <div id="ms-container">
-                        {%if {{window.location.href === 'https://geosata.ambiente.gba.gob.ar/catalogue/#/?f=map'}} %}
+                        <!-- {%if {{window.location.href === 'https://geosata.ambiente.gba.gob.ar/catalogue/#/?f=map'}} %}
                             {% include './hero.html' %}
-                        {%endif%}
+                        {%endif%} -->
+                        <h1>{{ request.path }}</h1>
                         <div class="gn-main-event-container">
                             <div class="gn-main-event-content">
                                 <div class="gn-main-loader"></div>
