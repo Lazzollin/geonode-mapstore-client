@@ -40,9 +40,12 @@
                     </div>
                     {% endcomment %}
                     <div class="gn-container">
-                        <h1>{{request.path}}</h1>
-                        <div id="gn-home-featured-resources-grid"></div>
-                        <div id="gn-home-resources-grid"></div>
+                        {% if request.path == '/' %}
+                            <h1>AaaA</h1>
+                        {% else %}
+                            <div id="gn-home-featured-resources-grid"></div>
+                            <div id="gn-home-resources-grid"></div>
+                        {% endif %}
                     </div>
                 {% endblock %}
     
