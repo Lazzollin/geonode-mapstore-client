@@ -38,8 +38,6 @@
 
                 {% block container %}
                     <div id="ms-container">
-                        <h1>{{ request.path }}</h1>
-                        <h2>aaaa</h2>
                         <div class="gn-main-event-container">
                             <div class="gn-main-event-content">
                                 <div class="gn-main-loader"></div>
@@ -51,6 +49,10 @@
 
                 {% block ms_scripts %}
                     <script id="gn-script" src="{% static 'mapstore/dist/js/gn-catalogue.js' %}?{% client_version %}"></script>
+                    <script>
+                        const container = document.getElementById('ms-container');
+                        container.insertAdjacentHTML('afterbegin', '<h1>AAA</h1>')
+                    </script>
                 {% endblock %}
 
                 {% block footer %}
