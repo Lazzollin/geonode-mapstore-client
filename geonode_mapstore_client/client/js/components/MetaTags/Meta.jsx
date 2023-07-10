@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 export const MetaTags = ({siteName, title, content, logo, contentURL =  window.location.href}) => {
     return (<Helmet>
-        <title>{title}</title>
+        <title>GeoSATA</title>
         <meta name="description" content={content} />
         <meta property="og:title" content={title} />
         <meta property="og:site_name" content={siteName} />
