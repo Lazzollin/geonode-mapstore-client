@@ -4,6 +4,7 @@
 
 {% if custom_theme.welcome_theme == 'JUMBOTRON_BG' or not slides %}
 {% if custom_theme.jumbotron_bg and custom_theme.jumbotron_bg.url %}
+{% endif %}
     <style>
         #gn-hero {
             background-image: url('{{ custom_theme.jumbotron_bg.url }}');
@@ -23,7 +24,6 @@
             }
         }
     </style>
-{% endif %}
 {% block extra_style %}
 {% endblock %}
 <div id="gn-hero" class="gn-hero">
